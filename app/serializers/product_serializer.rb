@@ -1,18 +1,18 @@
-class PostSerializer
-  def self.serialize(post)
+class ProductSerializer
+  def self.serialize(product)
 
     # start with the open brace to create a valid JSON object
-    serialized_post = '{'
+    serialized_product = '{'
 
-    serialized_post += '"id": ' + post.id.to_s + ', '
-    serialized_post += '"title": "' + post.title + '", '
-    serialized_post += '"description": "' + post.description + '", '
+    serialized_product += '"id": ' + post.id.to_s + ', '
+    serialized_product += '"title": "' + post.title + '", '
+    serialized_product += '"description": "' + post.description + '", '
 
     # the author association can also be represented in JSON
-    serialized_post += '"author": {'
-    serialized_post += '"name": "' + post.author.name + '"}'
+    serialized_product += '"author": {'
+    serialized_product += '"name": "' + post.author.name + '"}'
 
     # and end with the close brace
-    serialized_post += '}'
+    serialized_product += '}'
   end
 end
